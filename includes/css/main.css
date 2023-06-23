@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Iceberg&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.clear {
+    display: block;
+    clear: both;
+    line-height: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: .01em;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+header {
+    width: 100%;
+}
+
+/* title bar styling started */
+.title-bar {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    max-height:80px;
+    background-color: #102B1E;
+    padding: 20px 50px;
+    z-index: 1;
+}
+
+.login-register-title-bar .login,
+.login-register-title-bar .register {
+    padding: 8px 20px;
+    background-color: #FFDD02;
+    border-radius: 8px;
+    color: #0E6C34;
+    font-weight: 500;
+}
+
+.login-register-title-bar .login:hover,
+.login-register-title-bar .register:hover {
+    background-color: #0E6C34;
+    color: #FFDD02;
+    font-size: 18px;
+}
+
+.search-box-background {
+    background-color: #b4b2b2;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.search-box-background .search-box {
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+
+/* navigation bar styling started */
+.navigation-bar {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    background-color: #FFDD02;
+    padding: 0 50px;
+    z-index: 1;
+}
+
+.image-icon .ausway-logo {
+    width: 100px;
+    height: 100px;
+}
+
+.hamburg-icon-div {
+    display: none;
+}
+
+.nav-item .nav-link {
+    color: #0E6C34;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.nav-item .nav-link:hover {
+    font-size: 20px;
+    color: #102B1E;
+}
+
+.hero-video {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video video {
+    object-fit: cover;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    height: 100%;
+}
+
+
+/* media quaries */
+
+@media(max-width: 950px) {
+    .hamburg-icon-div {
+        display: block;
+    }
+    .nav-bar-div, .social-sharing {
+        display: none;
+    }  
+}
+
+@media(max-width: 575px) {
+    .login-register-title-bar {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-bar-title-bar {
+        display: none;
+    }
+
+    .hero-video {
+        height: 100vh;
+    }
+}

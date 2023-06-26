@@ -125,7 +125,114 @@ header {
     height: 100%;
 }
 
+.about-us-section {
+    padding: 50px 100px;
+    background: linear-gradient(141deg, #49AB30 0%, rgba(73, 171, 48, 0.45) 75.08%, rgba(73, 171, 48, 0.00) 100%);
+}
+
+.coaching-section {
+    padding: 50px 100px;
+}
+
+.section-title {
+    color: #0E6C34;
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 70px; 
+}
+
+.section-sub-title {
+    color: #FFDD02;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.section-short-description {
+    color: #000;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 500px;
+}
+
+.read-more-btn {
+    border-radius: 50px;
+    background: #F9D802;
+    color: #0E6C34;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: auto 0;
+}
+
+.read-more-btn:hover {
+    /* background: #0E6C34;
+    color: #F9D802; */
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about-us-img {
+    display: flex;
+    align-items: center;
+}
+
+.about-us-section-img img {
+    width: 500px;
+}
+
+.coaching-card-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.coaching-card-grid .coaching-card {
+    height: auto;
+    border: 2px solid #0E6C34;
+    box-shadow: 0 1px 10px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 95%;
+    margin: 0 0 20px 0;
+    padding-bottom: 1.25rem;
+}
+
+.coaching-card .card-title {
+    color: #0E6C34;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.coaching-card .card-text {
+    color: #000;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.coaching-card .card-btn {
+    width: 80%;
+    background-color: #0E6C34;
+    border-radius: 50px;
+    text-align: center;
+    color: #FFDD02;
+    margin: 0 auto;
+}
+
+.coaching-card img {
+    height: 280px;
+    object-fit: cover;
+}
+
 /* media quaries */
+
+@media (max-width: 1200px) {
+    .section-title,
+    .section-sub-title {
+        font-size: 50px;
+        line-height: 60px; 
+    }
+}
 
 @media(max-width: 950px) {
     .hamburg-icon-div {
@@ -133,7 +240,27 @@ header {
     }
     .nav-bar-div, .social-sharing {
         display: none;
+    }
+    .about-us-section,
+    .coaching-section {
+        padding: 50px 50px;
+    }
+    .section-title,
+    .section-sub-title {
+        font-size: 40px;
+        line-height: 60px; 
+    }
+    .coaching-card-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }  
+}
+
+@media (max-width: 767px) {
+    .about-us-img {
+        display: none;
+    }
 }
 
 @media(max-width: 575px) {
@@ -142,12 +269,27 @@ header {
         display: flex;
         justify-content: space-between;
     }
-
     .search-bar-title-bar {
         display: none;
     }
-
     .hero-video {
         height: 100vh;
+    }
+    .about-us-section,
+    .coaching-section {
+        padding: 10px;
+    }
+    .section-title,
+    .section-sub-title {
+        font-size: 34px;
+        line-height: 40px; 
+    }
+    .coaching-card-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .coaching-card-grid .coaching-card {
+        margin: 10px auto;
     }
 }

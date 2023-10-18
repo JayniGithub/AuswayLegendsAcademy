@@ -88,7 +88,7 @@ header {
 
 /* title bar styling started */
 .title-bar {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     width: 100%;
     max-height:80px;
@@ -126,12 +126,16 @@ header {
 
 /* navigation bar styling started */
 .navigation-bar {
-    position: absolute;
-    top: 80px;
+    /* position: absolute; */
+    /* top: 80px; */
     width: 100%;
     background-color: #FFDD02;
     padding: 0 50px;
-    z-index: 1;
+    /* z-index: 1; */
+}
+
+.hero {
+    height: 100vh;
 }
 
 .image-icon .ausway-logo {
@@ -155,16 +159,16 @@ header {
 }
 
 .hero-video {
-    position: relative;
-    height: 100vh;
+    /* position: relative; */
+    height: 100%;
     overflow: hidden;
 }
 
 .hero-video video {
     object-fit: cover;
     width: 100%;
-    position: absolute;
-    top: 100px;
+    /* position: absolute; */
+    /* top: 100px; */
     height: 100%;
 }
 
@@ -278,7 +282,8 @@ header {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.coach-grid .coach-card {
+.coach-grid .coach-card,
+.coaches-grid .coach-card-2 {
     height: auto;
     border: none;
     box-shadow: 0 1px 10px 4px rgba(0, 0, 0, 0.1);
@@ -288,19 +293,22 @@ header {
     padding-bottom: 1.25rem;
 }
 
-.coach-card .card-title {
+.coach-card .card-title,
+.coach-card-2 .card-title {
     color: black;
     font-size: 22px;
     font-weight: 500;
 }
 
-.coach-card .card-text {
+.coach-card .card-text,
+.coach-card-2 .card-text {
     color: #000;
     font-size: 18px;
     line-height: 30px;
 }
 
-.coach-card .card-btn {
+.coach-card .card-btn,
+.coach-card-2 .card-btn {
     width: 80%;
     display: flex;
     align-items: center;
@@ -317,20 +325,111 @@ header {
     object-fit: cover;
 }
 
+/* coaching page */
+
+ul.breadcrumb {
+    padding: 0;
+    list-style-type: none;
+    background-color: transparent;
+    margin-bottom: 0;
+    justify-content: center;
+}
+ul.breadcrumb li {
+    display: inline;
+    color: #000;
+    font-size: 25px;
+}
+ul.breadcrumb li+li::before {
+    padding: 8px;
+    color: #000;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: #0E6C34;
+    text-decoration: none;
+}
+.coaching-section-title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #0E6C34;
+}
+/* .coaching-section-content {
+    width: 80%;
+} */
+.coaching-section-content p {
+    font-size: 25px;
+    text-align: justify;
+    /* line-height: 30px; */
+}
+.inner-coaching-section,
+.inner-coaches-section {
+    padding: 40px 50px;
+}
+
+/* our coaches page */
+.inner-coaches-section .section-title {
+    text-align: center;
+}
+.coaches-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.coach-card-2 img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* coach detail page */
+.contact-detail-div {
+    display: flex;
+}
+.contact-detail-div .label-div {
+    padding-right: 20px;
+    font-weight: 700;
+}
+.contact-detail-div .label-div,
+.contact-detail-div .data-div {
+    font-size: 18px;
+}
+.social-media-contacts {
+    display: flex;
+}
+.social-media-contacts a:not(:last-child) {
+    padding-right: 20px;
+}
+.social-media-contacts a img {
+    width: 35px;
+    height: 35px;
+}
+.heading-content .coach-name-div {
+    font-weight: 700;
+    font-size: 50px;
+    color: #0E6C34;
+}
+.heading-content .coach-level {
+    font-size: 30px;
+    font-weight: 700;
+}
+.coach-description-div p {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: justify;
+}
+
 .footer {
     width: 100%;
     display: block;
-    position: relative;
     background: #0E6C34;
     color: #F9D802;
 }
 
 .footer-top {    
-    padding: 50px 100px;
+    padding: 50px 50px;
 }
 
 .footer-first-col {
-    width: 30%;
+    width: 20%;
 }
 
 .footer-second-col {
@@ -353,6 +452,25 @@ ul.footer-links {
 
 .footer-third-col {
     width: 25%;
+}
+
+.primary-btn,
+.primary-btn-2 {
+    background: #17442E;
+    color: #F9D802;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.primary-btn-2 {
+    background: #0E6C34 !important;
+}
+.primary-btn:hover {
+    background: #fff;
+    border: 1px solid #0E6C34;
+    color: #0E6C34;
 }
 
 .login-btn-footer,
@@ -378,17 +496,63 @@ ul.footer-links {
     color: #F9D802; */
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-
 .footer-bottom {
     text-align: center;
     background: #102B1E;
     padding: 20px 0;
 }
-
 .footer-bottom p {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 0;
+}
+
+/* Blog / news & events */
+.blog-section .section-title {
+    text-align: center;
+}
+.search-category-box {
+    background: #F5F5F5;
+}
+.social-media-share {
+    display: flex;
+}
+.social-media-share a:not(:last-child) {
+    padding-right: 10px;
+}
+.social-media-share a img {
+    width: 25px;
+    height: 25px;
+}
+.card-first-row,
+.card-third-row {
+    display: flex;
+    justify-content: space-between;
+}
+.card-block {
+    background: #F5F5F5;
+    border-radius: 5px;
+}
+.pagination {
+    display: inline-block;
+}
+  
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+.pagination a.active {
+    background-color: #0E6C34;
+    color: white;
+    border-radius: 5px;
+}
+  
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
 }
 
 /* media quaries */
@@ -403,6 +567,9 @@ ul.footer-links {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-first-col {
+        width: 30%;
     }
 }
 
@@ -451,6 +618,17 @@ ul.footer-links {
     .btn-divs .login-btn-footer {
         margin-bottom: 0 !important;
     }
+    .heading-content .coach-name-div {
+        font-weight: 700;
+        font-size: 40px;
+        color: #0E6C34;
+    }
+    .coach-description-div p {
+        font-size: 20px;
+    }
+    .coach-image-div img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -465,6 +643,7 @@ ul.footer-links {
     .footer-bottom p {
         padding: 10px 5px;
     }
+    
 }
 
 @media(max-width: 575px) {
@@ -505,5 +684,17 @@ ul.footer-links {
     }
     .coach-grid .coach-card {
         margin: 10px auto;
+    }
+    .inner-coaching-section {
+        padding: 40px 10px;
+    }
+    .login-btn-footer,
+    .register-btn-footer {
+        width: 40% !important;
+    }
+    .coaches-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
